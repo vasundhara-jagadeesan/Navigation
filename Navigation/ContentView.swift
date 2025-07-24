@@ -12,13 +12,20 @@ struct ContentView: View {
         NavigationStack {
             VStack {
                 Text("This is the homepage 🌷")
+                    .font(.title)
+                    .fontWeight(.thin)
+                    .foregroundColor(Color(hue: 0.617, saturation: 0.384, brightness: 0.823))
                 NavigationLink(destination: SecondView()) {
                     Text("Click me")
+                        
                 }
                 
                 
             }
             .padding()
+            .navigationTitle("home")
+            .navigationBarTitleDisplayMode(.inline)
+            .navigationBarHidden(true)
         }
     }
 }
